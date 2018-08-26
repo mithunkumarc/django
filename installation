@@ -13,3 +13,7 @@ sudo apt-get install python3-django
  >> python3 manage.py runserver
 
 # Starting development server at http://127.0.0.1:8000/
+
+
+inside helloworld_project >> python3 manage.py startapp pages
+
