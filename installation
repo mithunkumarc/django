@@ -6,3 +6,10 @@ sudo pip3 install django
 
 sudo apt-get install python3-django
 
+#creating first project
+
+ >> django-admin startproject helloworld_project
+ >> cd helloworld_project/
+ >> python3 manage.py runserver
+
+# Starting development server at http://127.0.0.1:8000/
