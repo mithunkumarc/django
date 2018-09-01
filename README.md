@@ -23,7 +23,7 @@ django allows multiple apps in single project, to make easiert to manage
 3.create handling function in views.py
 
 def subPageView(request):
-    return HttpResponse('<h1>hello sub page</h1>')
+    return HttpResponse('hello sub page')
     
     
 4.run and localhost:8000/sub will call subPageView function which return some text response
