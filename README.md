@@ -2,7 +2,7 @@
 
 
 useful commands : 
- python3 manage.py runserver : to start server
+ python3 manage.py runserver : to start server <br>
  python3 manage.py startapp <appname> : to create a new app, will create list of module including view.py
   touch <appname>/urls.py : creating urls.py module under newly created app, configuer url path, handling function and name to url,
                             include this urls.py in main app urls.py module
