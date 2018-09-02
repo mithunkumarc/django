@@ -1,0 +1,52 @@
+django-admin startproject classbasedtemplate
+python3 manage.py startapp firstapp
+
+---------------------------------
+in first app
+--------------------------------
+1.views.py
+
+from django.views.generic import TemplateView
+class AboutView(TemplateView):
+    template_name = "about.html"
+
+
+2.urls.py
+
+from django.conf.urls import url
+from . import views
+from firstapp import views
+urlpatterns = [
+
+    url('about/', views.AboutView.as_view(), name='about'),
+]
+
+---------------------------------------
+project level
+--------------------------------------
+1.urls.py
+
+from django.contrib import admin
+from django.urls import path
+from firstapp.views import AboutView
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('about/', AboutView.as_view()),
+]
+
+
+2.settings.py
+...
+'DIRS': [os.path.join(BASE_DIR, 'templates')],
+...
+
+
+
+
+--------------------------------------------
+classbasedtemplate > python3 manage.py runserver
+
+
+localhost:8000/about/
+
