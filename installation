@@ -28,3 +28,6 @@ inside helloworld_project >> python3 manage.py startapp pages
 * python3 manage.py migrate
 
 # link : https://djangoforbeginners.com/hello-world/
+
+
+#migration command : python3 manage.py migrate
