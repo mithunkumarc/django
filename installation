@@ -1,6 +1,6 @@
 sudo apt-get install -y python3-pip
 
-pip3 install virtualenv
+pip3 install virtualenv --or-- "sudo -H pip3 install virtualenv"
 
 sudo pip3 install django
 
