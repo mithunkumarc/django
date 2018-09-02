@@ -10,7 +10,15 @@ sudo apt-get install python3-django
 
  >> django-admin startproject helloworld_project
  >> cd helloworld_project/
- >> python3 manage.py runserver
+ 
+ #creating virtual environment :
+ helloworld_project >> virtualenv venv -p python
+ 
+ #activate virtual environment : 
+ helloworld_project >> source venv/bin/activate
+ 
+ #run the server
+ helloworld_project >> python3 manage.py runserver
 
 # Starting development server at http://127.0.0.1:8000/
 
