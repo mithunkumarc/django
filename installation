@@ -30,4 +30,7 @@ inside helloworld_project >> python3 manage.py startapp pages
 # link : https://djangoforbeginners.com/hello-world/
 
 
-#migration command : python3 manage.py migrate
+#migration command : python3 manage.py migrate 
+# reason for migration : 
+# to keep track of the changes you create in the models.py file, 
+# so to keep the database and the models.py synchronized.
