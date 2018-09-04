@@ -42,3 +42,13 @@ python manage.py createsuperuser
 8.django may create table , blog_post: blog: app name and post: class name in model
 
 
+********************************************************************************************
+
+
+# admin interface will directly interact with blog model(Post)/blog_post table
+#open localhost:8000/admin : 
+#you will find blog project title under this, you will find a link to interact with blog_post table
+
+
+check : admin.py
+
