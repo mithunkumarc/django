@@ -1,0 +1,38 @@
+<h3>Introduction</h3>
+
+Django is a web application framework written in Python programming language. 
+
+It is based on MVT (Model View Template) design pattern. 
+
+The Django is very demanding due to its rapid development feature.
+
+It takes less time to build application after collecting client requirement.
+
+By using Django, we can build web applications in very less time. 
+
+Django is designed in such a manner that it handles much of configure things automatically, 
+so we can focus on application development only.
+
+
+
+
+Features of Django :
+
+
+  * Rapid Development
+  
+  * Secure :
+    Django takes security seriously and helps developers to avoid many common security mistakes, 
+    such as SQL injection, cross-site scripting, cross-site request forgery etc. 
+    Its user authentication system provides a secure way to manage user accounts and passwords.
+  
+  * Scalable
+  
+  * Fully loaded :
+    Django includes various helping task modules and libraries which can be used to handle common Web development tasks. 
+
+  * Versatile
+
+  * Open Source
+  
+  * Vast and Supported Community
