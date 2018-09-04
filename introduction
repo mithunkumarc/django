@@ -1,3 +1,5 @@
+<h3>Introduction<h3>
+
 Django is a web application framework written in Python programming language. 
 
 It is based on MVT (Model View Template) design pattern. 
@@ -10,3 +12,18 @@ By using Django, we can build web applications in very less time.
 
 Django is designed in such a manner that it handles much of configure things automatically, 
 so we can focus on application development only.
+
+
+
+
+<h3>Features of Django</h3>
+
+<ul>
+  <li>Rapid Development</li>
+  <li>Secure</li>
+  <li>Scalable</li>
+  <li>Fully loaded</li>
+  <li>Versatile</li>
+  <li>Open Source</li>
+  <li>Vast and Supported Community</li>
+</ul>
