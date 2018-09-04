@@ -1,0 +1,44 @@
+covers:
+using sqlite 
+creating admin user
+
+
+1.create a project
+
+django-admin startproject TempExample
+
+*********************************************************************************************
+2.create virtual environment for project to avoid conflict, to isolate our project from other
+
+virtualenv venv -p python 
+source venv/bin/activate
+
+*********************************************************************************************
+
+3.create an app under project
+python3 manage.py startapp blog
+
+*********************************************************************************************
+
+4.To create table which is defined in models.py
+python3 manage.py migrate
+
+#you will notice a file 0001_initial.py in migration folder
+
+*********************************************************************************************
+5.create user to login / you cannot add new post unless you login 
+python manage.py createsuperuser
+
+# give necessary details
+
+*********************************************************************************************
+
+6.check urls.py(both project and app level) , settings.py, views.py, forms.py for changes
+
+*********************************************************************************************
+7.use jade chrome plugin to see the blog_post table
+
+*********************************************************************************************
+8.django may create table , blog_post: blog: app name and post: class name in model
+
+
