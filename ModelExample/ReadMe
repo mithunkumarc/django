@@ -1,4 +1,16 @@
- web design
+######################################	
+
+In Django, a model is a class which is used to contain essential fields and methods. 
+Each model class maps to a single table in the database.
+
+Django Model is a subclass of django.db.models.Model and each field of the model class represents a database field (column).
+
+Django provides us a database-abstraction API which allows us to create, retrieve, update and delete a record 
+from the mapped table.
+
+Model is defined in Models.py file. This file can contain multiple models
+
+######################################
 
 
  1.creating project
