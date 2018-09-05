@@ -1,0 +1,58 @@
+ web design
+
+
+ 1.creating project
+ django-admin startproject ModelExample
+
+ 2.creatin app
+ ModelExample > django-admin startapp company
+
+ 
+ 3.activating virtual environment :  
+ ModelExample > virtualenv venv -p python
+ ModelExample > source venv/bin/activate
+
+ 
+ sync model with db : creates tables
+ ModelExample > python3 manage.py migrate
+
+
+  4.create admin user to interact :
+  ModelExample > python3 manage.py createsuperuser
+  #give proper username, email and password
+
+ 
+ 5. runserver  ; python3 manage.py runserver
+
+	open site : 
+ http://127.0.0.1:8091/admin
+ login by giving username and password
+
+
+ 6. create a model now : company.Models.py 
+    
+    from django.db import models    
+    class Employee(models.Model):  
+        first_name = models.CharField(max_length=30)  
+        last_name = models.CharField(max_length=30)  
+
+ 7. Register Employee model in admin.py
+ 
+ from django.contrib import admin
+ from company import models 
+ # Register your models here.
+ admin.site.register(models.Employee)
+
+ 8. Register Company in settings.py
+    under installed apps list
+    add company at the end
+
+
+ 9. syncdb after this to create table (python3 manage.py migrate)
+ 
+ python3 manage.py migrate
+	--or--
+ python3 manage.py makemigrations
+
+
+ # start server again : you will find company administration with ui for employee
