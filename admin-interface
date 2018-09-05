@@ -1,0 +1,12 @@
+1.django provides default admin interface which helps us to interact with models of other apps.
+
+2.link to open admin interface : http://your-server-ip:8000/admin/
+
+3.create admin user : python manage.py createsuperuser
+  give necessary details
+
+4.you have to register models to admin.py :
+
+        from django.contrib import admin
+        from appName.models import modelName    # import model from app        
+        admin.site.register(modelName)               # Register your models here.
