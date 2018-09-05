@@ -1,0 +1,19 @@
+This project is a continuation of template example 
+static :
+
+1. creating static folder under app
+2. under static folder save images
+3. create javascript files under static>js folder
+4. create css files under static>css folder
+
+
+
+
+In a web application, apart from business logic and data handling, 
+we also need to handle and manage static resources like CSS, JavaScript, images etc.
+
+It is important to manage these resources so that it does not affect our application performance.
+
+Django deals with it very efficiently and provides a convenient manner to use resources.
+
+The django.contrib.staticfiles module helps to manage them. 
