@@ -1,0 +1,32 @@
+Model forms
+
+It is a class which is used to create an HTML form by using the Model. 
+It is an efficient way to create a form without writing HTML code.
+
+Django automatically does it for us to reduce the application development time.
+For example, suppose we have a model containing various fields, we don't need to repeat the fields in the form file.
+
+For this reason, Django provides a helper class which allows us to create a Form class from a Django model.
+
+--Model Form--
+
+1.create a project
+>> django-admin startproject ModelFormExample
+
+2.enable virtual enviroment
+ >> virtualenv venv -p python
+ >> source venv/bin/activate
+
+
+3. django-admin startapp studentapp
+
+4. add student class into models.py
+
+5. create form class inf form.py
+
+6. add url path for index in studentapp and include urls.py of studentapp to ModelFormExample urls.py
+
+
+7. add studentapp in settings.py
+
+8. add template path in settings.py
