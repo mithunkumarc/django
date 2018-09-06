@@ -5,3 +5,79 @@ Database connectivity requires all the connection details such as database name,
 
 To connect with MySQL, django.db.backends.
 mysql driver is used to establishing a connection between application and database.
+--------------------------------------------------------------------------------------
+
+
+Mysql
+1.creating project 
+>> django-admin startproject JdbcExample
+
+
+2.creating app
+>> django-admin startapp EmployeeApp
+
+3.enable virtual environment
+>> virtualenv venv -p python
+>> source venv/bin/activate
+
+
+4.add EmployeeApp in Installed apps(settings.py)
+
+5.add below in settings.py
+
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'djangoApp',  
+        'USER':'root',  
+        'PASSWORD':'mysql',  
+        'HOST':'localhost',  
+        'PORT':'3306'  
+    }  
+} 
+
+
+6.install mysqlclient :
+import mysqlclient  #remove after installing
+import MySQLdb
+
+
+or try
+
+import pymysql.cursors
+import mysqlclient
+import MySQLdb
+
+
+7.import MySQLdb in settings.py and 
+  python3 manage.py migrate
+
+
+
+# check database , you will find django database in mysql
+
+
+
+
+9.Migrating Model : creating app related table
+create employee class in models.py
+
+and 
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+
+# check migrations folder and mysql
+
+
+
+
+
+
+################################################################
+--testing--- ignore
+>> sudo apt-get install python-pip python-dev libmysqlclient-dev
+   sudo apt install default-libmysqlclient-dev
+export PATH=$PATH:/usr/local/mysql/bin
+################################################################
