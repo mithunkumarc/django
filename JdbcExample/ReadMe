@@ -1,0 +1,7 @@
+The settings.py file contains all the project settings along with database connection details. 
+By default, Django works with SQLite, database and allows configuring for other databases as well.
+
+Database connectivity requires all the connection details such as database name, user credentials, hostname drive name etc.
+
+To connect with MySQL, django.db.backends.
+mysql driver is used to establishing a connection between application and database.
