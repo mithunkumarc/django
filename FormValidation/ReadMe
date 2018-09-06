@@ -1,0 +1,31 @@
+Django provides built-in methods to validate form data automatically. 
+Django forms submit only if it contains CSRF tokens. 
+It uses uses a clean and easy approach to validate data.
+
+The is_valid() method is used to perform validation for each field of the form, it is defined in Django Form class. 
+It returns True if data is valid and place all data into a cleaned_data attribute.
+
+-----------------------------------------------------------------------
+
+Form validation :
+1.create project
+django-admin startproject FormValidation
+
+
+2.create app
+>> django-admin startapp employeeapp
+
+
+3.enable virtual environment
+virtualenv venv -p python
+source venv/bin/activate
+
+
+4.create class Employee in Models.py
+
+5.EmployeeForm in forms.py
+
+6.write a method in views.py which return employee form through html
+
+
+7.add templates path and employeeapp name in settings.py
