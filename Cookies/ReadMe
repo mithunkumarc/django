@@ -1,0 +1,18 @@
+1.create project Cookies
+
+2.create app mycookie
+
+3.enable virutal environment
+
+4.create setcookie and getcookie function in views.py
+
+5.project level urls.py add url pattern for setcookie and getcookie functions
+
+6.run , check scookie and gcookie url patterns
+
+http://127.0.0.1:8000/scookie
+http://127.0.0.1:8000/gcookie
+
+check cookies
+
+use response.delete_cookie('cookie_key_name') to delete cookies
