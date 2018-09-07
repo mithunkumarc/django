@@ -1,0 +1,5 @@
+urls.py - project level
+urls.py - app level
+
+even though you can write app level url pattern in project level urls.py but it is best pracitce to put 
+app specific urls in app level urls.py module
