@@ -1,0 +1,30 @@
+1.create project
+>> django-admin startproject Session
+
+2.create app
+Session >>  django-admin startapp mysession
+
+
+3.enable virtual environment
+>> virtualenv venv -p python
+>> source venv/bin/activate
+
+
+4.create funtions for setsession and getsession
+
+5.add url pattern in urls.py. In this example project level urls.py directly used. 
+  you could use app levele urls.py and include 
+
+
+6.add app in settings.py
+
+7.allow django to create session table, python3 manage.py migrate
+
+8.http://127.0.0.1:8000/ssession
+
+check cookies you will find session id(session cookie), session key value will be saved at server
+
+9.http://127.0.0.1:8000/gsession
+
+10.after deleting session key, try http://127.0.0.1:8000/gsession
+
