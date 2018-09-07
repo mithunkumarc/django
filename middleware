@@ -1,0 +1,28 @@
+In Django, middleware is a lightweight plugin that processes during request and response execution. 
+Middleware is used to perform a function in the application. 
+The functions can be a security, session, csrf protection, authentication etc.
+
+Django provides various built-in middleware and also allows us to write our own middleware. 
+See, settings.py file of Django project that contains various middleware, that is used to provides functionalities to the application. 
+For example, Security Middleware is used to maintain the security of the application.
+
+settings.py
+
+    MIDDLEWARE = [  
+        'django.middleware.security.SecurityMiddleware',  
+        'django.contrib.sessions.middleware.SessionMiddleware',  
+        'django.middleware.common.CommonMiddleware',  
+        'django.middleware.csrf.CsrfViewMiddleware',  
+        'django.contrib.auth.middleware.AuthenticationMiddleware',  
+        'django.contrib.messages.middleware.MessageMiddleware',  
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',  
+    ]  
+
+
+
+
+Middleware Order and Layering
+
+Middleware applies in the order it is defined in MIDDLEWARE list and each middleware class is a layer. 
+The MIDDLEWARE list is like an onion so each request passes through from top to bottom 
+and response is in reverse order (bottom to up)
