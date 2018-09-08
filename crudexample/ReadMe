@@ -1,0 +1,44 @@
+1.create project
+django-admin startproject crudexample
+
+2.create app inside project
+
+crudexample >> django-admin startapp employee
+
+3.create virtual environment
+ >> virtualenv venv -p python
+ >> source venv/bin/activate
+
+
+4. this example uses db.sqlite3 , below code uses mysql
+database setup, configure in settings.py
+    DATABASES = {  
+        'default': {  
+            'ENGINE': 'django.db.backends.mysql',  
+            'NAME': 'djangodb',  
+            'USER':'root',  
+            'PASSWORD':'root',  
+            'HOST':'localhost',  
+            'PORT':'3306'  
+        }  
+    }  
+
+
+5.create class employee in models.py
+
+6.create class employee form in forms.py (employee app)
+
+7.write functions in views.py to handle crud
+
+8.create html files in templates
+
+9.add app in installed app list under settings.py
+
+10.add template path in settins.py
+
+11.creating db and table
+ python3 manage.py makemigrations
+ python3 manage.py migrate
+
+
+note: no css files
