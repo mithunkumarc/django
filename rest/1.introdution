@@ -1,1 +1,11 @@
-http://www.django-rest-framework.org/tutorial/quickstart/
+install django rest, Install using pip or pip3 , including any optional packages you want...
+
+        pip install djangorestframework
+        pip install markdown       # Markdown support for the browsable API.
+        pip install django-filter  # Filtering support
+
+
+for quickstart example : 
+        http://www.django-rest-framework.org/tutorial/quickstart/
+
+
