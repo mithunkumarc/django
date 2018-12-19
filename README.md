@@ -73,6 +73,28 @@
 
 
 
+
+#### output link : 
+            
+            http://127.0.0.1:8001/polls
+            http://127.0.0.1:8001/admin
+            
+#### set admin username and password
+
+            create db for auth_user/admin
+            
+                python manage.py migrate
+            
+            creating super user
+
+                python3 manage.py createsuperuser
+                
+                //follow instructions
+                
+> admin site lets you to register models
+            
+            
+
 #### source : https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 ---
 
