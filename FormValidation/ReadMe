@@ -28,4 +28,8 @@ source venv/bin/activate
 6.write a method in views.py which return employee form through html
 
 
-7.add templates path and employeeapp name in settings.py
+7.add templates path in templates	
+
+    'DIRS': [os.path.join(BASE_DIR,'templates')], 
+
+8. In settings.py, add employeeapp in INSTALLED APPS 
