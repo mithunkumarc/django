@@ -23,7 +23,7 @@ Mysql
 
 4.add EmployeeApp in Installed apps(settings.py)
 
-5.add below in settings.py
+5.add below in settings.py,  djangoApp : dbname
 
 DATABASES = {  
     'default': {  
