@@ -135,3 +135,74 @@ http://127.0.0.1:8000/student/2018/ : any year other than 2003
 http://127.0.0.1:8000/student/2003/03/ : year/month 
 
 
+
+-------------------------------------------------------------------------
+
+
+
+--testing--- ignore
+>> sudo apt-get install python-pip python-dev libmysqlclient-dev
+   sudo apt install default-libmysqlclient-dev
+export PATH=$PATH:/usr/local/mysql/bin
+
+
+
+
+
+<QueryDict: 
+	{
+		'csrfmiddlewaretoken': ['tXAwgF2kt6D2TMcqX4bgiM0rhrlqHeS5J9SBei9VeWRwNv36OJ4MBU3UeaNPQ4A7'], 
+		'first_name': ['mithun'], 
+		'last_name': ['kumar']
+	}
+> 
+
+
+
+--------------------------------
+a in incoming request for http://domain/user/thaiyoshi/?message=Hi
+
+def profile_page(request, username=None):
+    user = User.objects.get(username=username)
+    message = request.GET.get('message')
+
+----------------------------------
+
+post request form data : 
+
+<QueryDict: 
+	{
+		'csrfmiddlewaretoken': ['tXAwgF2kt6D2TMcqX4bgiM0rhrlqHeS5J9SBei9VeWRwNv36OJ4MBU3UeaNPQ4A7'], 
+		'first_name': ['mithun'], 
+		'last_name': ['kumar']
+	}
+> 
+
+
+
+from django.shortcuts import render,redirect  
+from student.form import StuForm  
+from django.http import HttpResponse  
+from django.views.decorators.http import require_http_methods  
+
+def index(request):  
+    stu = StuForm()  
+    return render(request,"index.html",{'form':stu})
+
+
+@require_http_methods(["POST"])  
+def create(request):
+    if request.method == "POST":  
+        form = StuForm(request.POST)  
+        if form.is_valid():  
+            try:  
+                # form.save()                
+                print(form.data['first_name'])
+                print(form.data['last_name'])
+                # return redirect('/student/index')  
+			print(form.data.getlist('first_name'))
+            except:  
+                pass  
+    else:  
+        form = StuForm()  
+    return render(request,'index.html',{'form':form})  
