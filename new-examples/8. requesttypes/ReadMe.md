@@ -35,41 +35,75 @@ Response
 
 7.student/views.py
 
-		from django.shortcuts import render,redirect  
-		from student.forms import StuForm  
-		from django.http import HttpResponse  
-		from django.views.decorators.http import require_http_methods  
+	from django.shortcuts import render,redirect  
+	from student.forms import StuForm  
+	from django.http import HttpResponse  
+	from django.views.decorators.http import require_http_methods  
 
-		def index(request):  
-		    stu = StuForm()  
-		    return render(request,"index.html",{'form':stu})
-
-
-		@require_http_methods(["POST"])  
-		def create(request):
-		    if request.method == "POST":  
-			      form = StuForm(request.POST)  
-			      if form.is_valid():  
-			          try:  
-				            print(form.data)  
-			          except:  
-				            pass  
-		    else:  
-			      form = StuForm()  
-		        return render(request,'index.html',{'form':form})  
+	def index(request):  
+	    stu = StuForm()  
+	    return render(request,"index.html",{'form':stu})
 
 
+	# @require_http_methods(["POST"]) only accepts post 
+	def create(request):
+	    if request.method == "POST":  
+		    form = StuForm(request.POST)  
+		    if form.is_valid():  
+			try:  
+			    print('post data')
+			    print(form.data)
+			    # form.data['first_name']
+			    return redirect('/student/index')
+			except:  
+			    pass      
+	    if request.method == "GET":  
+		    form = StuForm(request.GET)  
+		    if form.is_valid():  
+			try:  
+			    print('get data')
+			    print(form.data)  
+			    return redirect('/student/index')
+			except:  
+			    pass  
+	    else:  
+		form = StuForm()  
+		return render(request,'index.html',{'form':form})
 
-8.student/urls.py : changed
 
-    from django.urls import path
-    from student.views import index,create
 
-    urlpatterns = [
-        path('index/', index, name='index'),
-        path('student_create/', create, name='create'),
-    ] 
+	#query param : get request
+	def special_case_2003(request):
+	    return HttpResponse('special_case_2003')
 
+	#query param : get request
+	def year_archive(request,year):
+	    return HttpResponse('year_archive')
+
+	#query param : get request
+	def month_archive(request,year,month):
+	    return HttpResponse('month_archive')
+
+	#query param : get request
+	def message_page(request):
+	    message =  request.GET.get('message')
+	    return HttpResponse(message)
+
+
+8.student/urls.py :
+
+		from django.urls import path
+		from student.views import *
+
+		urlpatterns = [
+		    path('index/', index, name='index'),
+		    path('student_create/', create, name='create'),
+		    path('student_create_get/', create, name = 'create'),
+		    path('2003/', special_case_2003, name = 'special_case_2003'),
+		    path('<int:year>/', year_archive, name = 'year_archive'),
+		    path('<int:year>/<int:month>/', month_archive, name = 'month_archive'),
+		    path('message/',message_page,name='message_page'),
+		]    
 
 pip3 install django
 
@@ -84,23 +118,31 @@ pip3 install django
         path('student/', include('student.urls')),
     ]
 
-10. student/templates/index.html : changed
+10. student/templates/index.html :
 
-    <!DOCTYPE html>  
-    <html lang="en">  
-    <head>  
-    <meta charset="UTF-8">  
-    <title>Index</title>  
-    </head>  
-    <body>  
-    <h4>register student name</h4>
-    <form method="POST" class="post-form" action="/student/student_create/">  
-        {% csrf_token %}  
-        {{ form.as_p }}  
-        <button type="submit" class="save btn btn-default">Save</button>  
-    </form>  
-    </body>  
-    </html>
+		<!DOCTYPE html>  
+		<html lang="en">  
+		<head>  
+		<meta charset="UTF-8">  
+		<title>Index</title>  
+		</head>  
+		<body>  
+			<h4>register student name</h4>
+			<form method="POST" class="post-form" action="/student/student_create/">  
+			    {% csrf_token %}  
+			    {{ form.as_p }}  
+			    <button type="submit" class="save btn btn-default">Save</button>  
+			</form>  
+			<h4>using get request</h4>
+			<form method="GET"  action="/student/student_create_get/">  
+			    {% csrf_token %}  
+			    {{ form.as_p }}  
+			    <button type="submit" class="save btn btn-default">Save</button>  
+			</form>  
+
+
+		</body>  
+		</html>
 
 10. add student app in settings file, INSTALLED Apps
 
@@ -110,13 +152,14 @@ pip3 install django
     'DIRS': [os.path.join(BASE_DIR,'templates')], in templates
 
 
+12. ignore migrations
 
-15. python3 manage.py runserver
+
+13. python3 manage.py runserver
 
 14. link : http://127.0.0.1:8000/student/index/
 
-ignore migrations
-
+	
 
 sending post request : 
 
@@ -138,16 +181,7 @@ http://127.0.0.1:8000/student/2003/03/ : year/month
 
 -------------------------------------------------------------------------
 
-
-
---testing--- ignore
->> sudo apt-get install python-pip python-dev libmysqlclient-dev
-   sudo apt install default-libmysqlclient-dev
-export PATH=$PATH:/usr/local/mysql/bin
-
-
-
-
+data inside httprequest is in the form of query dict:
 
 <QueryDict: 
 	{
@@ -157,52 +191,5 @@ export PATH=$PATH:/usr/local/mysql/bin
 	}
 > 
 
+use :  form.data['first_name'], form.data['last_name'] to read
 
-
---------------------------------
-a in incoming request for http://domain/user/thaiyoshi/?message=Hi
-
-def profile_page(request, username=None):
-    user = User.objects.get(username=username)
-    message = request.GET.get('message')
-
-----------------------------------
-
-post request form data : 
-
-<QueryDict: 
-	{
-		'csrfmiddlewaretoken': ['tXAwgF2kt6D2TMcqX4bgiM0rhrlqHeS5J9SBei9VeWRwNv36OJ4MBU3UeaNPQ4A7'], 
-		'first_name': ['mithun'], 
-		'last_name': ['kumar']
-	}
-> 
-
-
-
-from django.shortcuts import render,redirect  
-from student.form import StuForm  
-from django.http import HttpResponse  
-from django.views.decorators.http import require_http_methods  
-
-def index(request):  
-    stu = StuForm()  
-    return render(request,"index.html",{'form':stu})
-
-
-@require_http_methods(["POST"])  
-def create(request):
-    if request.method == "POST":  
-        form = StuForm(request.POST)  
-        if form.is_valid():  
-            try:  
-                # form.save()                
-                print(form.data['first_name'])
-                print(form.data['last_name'])
-                # return redirect('/student/index')  
-			print(form.data.getlist('first_name'))
-            except:  
-                pass  
-    else:  
-        form = StuForm()  
-    return render(request,'index.html',{'form':form})  
