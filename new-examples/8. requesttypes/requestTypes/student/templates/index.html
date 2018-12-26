@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<title>Index</title>  
+</head>  
+<body>  
+<h4>register student name</h4>
+<form method="POST" class="post-form" action="/student/student_create/">  
+    {% csrf_token %}  
+    {{ form.as_p }}  
+    <button type="submit" class="save btn btn-default">Save</button>  
+</form>  
+<h4>using get request</h4>
+<form method="GET"  action="/student/student_create_get/">  
+    {% csrf_token %}  
+    {{ form.as_p }}  
+    <button type="submit" class="save btn btn-default">Save</button>  
+</form>  
+
+
+</body>  
+</html>
