@@ -43,6 +43,9 @@
      urlpatterns = [
          path('', views.index, name='index'),
      ]
+     
+     Note :  use name of url instead of hardcoding path in views.py(while redirecting or sending response path), 
+             name can be any unique string to identify particular path
 
 
 #### 5.3 : mysite/urls.py
