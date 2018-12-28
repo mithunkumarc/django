@@ -101,7 +101,11 @@
 #### source : https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 ---
 
-#### some important commands
+#### some important points 
+
+csrf_token : Cross Site Request Forgery protection
+    
+    some unique number through which django identifies user. used in forms.
 
 creating project : 
     
