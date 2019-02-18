@@ -24,6 +24,9 @@
     
     source venv/bin/activate
 
+    --or--
+    source project_env/bin/activate         # project_env: check your project folder(ends with env)
+    
 #### 5. make changes to below files
 
 #### 5.1 : polls/views.py
