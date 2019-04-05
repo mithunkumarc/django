@@ -43,7 +43,8 @@
            from . import views
 
            urlpatterns = [
-               path('', views.index, name='index'),   # this(empty path) url can be identified as index in views.py
+	       # this(empty path) url can be identified as index in views.py
+               path('', views.index, name='index'),   
            ]
  
 
