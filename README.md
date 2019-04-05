@@ -21,6 +21,11 @@
                 //create project
                 >> django-admin startproject mysite
                 //create tables for : uses sqlite
+                # enable virtual env
+                >> virtualenv venv -p python3
+                >> source venv/bin/activate
+
+                
                 >> python3 manage.py migrate
                 //you may run migrate in another terminal
                 >> python3 manage.py runserver 8081
