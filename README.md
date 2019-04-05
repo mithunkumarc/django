@@ -1,3 +1,35 @@
+#### django setup laterst version : 
+
+            for python3 use pip3
+            
+            install django :  pip3 install Django
+
+            check version  :  python3 -m django --version
+            2.2
+
+            >>> import django
+            >>> django.__version__
+            '2.2'
+            >>> 
+
+
+#### starting server 
+
+                >> cd Documents/
+                >> mkdir djangop3
+                >> cd djangop3/
+                //create project
+                >> django-admin startproject mysite
+                //create tables for : uses sqlite
+                >> python3 manage.py migrate
+                //you may run migrate in another terminal
+                >> python3 manage.py runserver 8081
+
+                Starting development server at http://127.0.0.1:8000/
+
+
+
+
 #### django
 
 
