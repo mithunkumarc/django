@@ -32,7 +32,10 @@
 
                 Starting development server at http://127.0.0.1:8000/
 
+#### install django package for pycharm : 
 
+
+            File > settings > Project(project name)> Project interpreter > add Django package          
 
 
 #### django
