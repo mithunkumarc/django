@@ -13,7 +13,7 @@
             >>> 
 
 
-#### starting server 
+#### starting server : use virtual environment
 
                 >> cd Documents/
                 >> mkdir djangop3
