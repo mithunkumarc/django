@@ -45,7 +45,7 @@
 
 #### 1. check django installation : 
     
-     python -m django --version
+     python3 -m django --version
 
 
 
@@ -55,12 +55,12 @@
 
 #### 3. creating module/app : 
    
-     mysite> python manage.py startapp polls
+     mysite> python3 manage.py startapp polls
 
 
 #### 4. enabling virtual env for python :
 
-    virtualenv venv -p python
+    virtualenv venv -p python3
     
     source venv/bin/activate
 
