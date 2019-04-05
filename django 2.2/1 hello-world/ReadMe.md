@@ -63,6 +63,16 @@
                path('polls/', include('polls.urls')),
                path('admin/', admin.site.urls),
            ]
+	   
+#### mysite/settings.py
+
+	add polls app in application definition : 
+	
+	INSTALLED_APPS = [
+		...
+		"polls"
+	]
+
 
 #### run project : 
 
