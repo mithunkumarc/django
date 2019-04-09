@@ -2,19 +2,20 @@
 
       Documents >>   django-admin startproject mysite
 
-#### create app inside project
-
-        >> cd mysite/
-        >> pip3 install django
-        >> python3 manage.py startapp polls
-
 
 #### activate virtual env
-    
-        virtualenv venv -p python3
-        source venv/bin/activate
 
+        >> cd mysite/
+        mysite >> virtualenv venv -p python3
+        mysite >> source venv/bin/activate
         deactivate command : deactivate
+
+
+#### create app inside project 
+        
+        mysite >> pip3 install django
+        mysite >> python3 manage.py startapp polls
+
 
 
 #### add django plugin to pycharm 
