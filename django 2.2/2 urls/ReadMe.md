@@ -8,6 +8,8 @@
         >> cd mysite/
         mysite >> virtualenv venv -p python3
         mysite >> source venv/bin/activate
+        
+        //if you wish to stop virutal env
         deactivate command : deactivate
 
 
