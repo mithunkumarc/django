@@ -10,8 +10,11 @@
             mitun@mithun-Latitude-E6230:~/Documents/djangop3$ django-admin startproject mysite
             mitun@mithun-Latitude-E6230:~/Documents/djangop3$ cd mysite/
 
-#### create app            
-            mitun@mithun-Latitude-E6230:~/Documents/djangop3/mysite$ python3 manage.py startapp polls
+#### create app        
+		#  you may need         
+		# "pip3 install django"  for creating app
+            
+	    mitun@mithun-Latitude-E6230:~/Documents/djangop3/mysite$ python3 manage.py startapp polls
 
 
 #### enable virtual env
