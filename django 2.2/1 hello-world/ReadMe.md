@@ -70,7 +70,7 @@
 	
 	INSTALLED_APPS = [
 		...
-		"polls"
+		"polls"				#mandaroty if there is a model in app
 	]
 
 
