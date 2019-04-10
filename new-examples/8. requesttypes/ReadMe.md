@@ -18,6 +18,10 @@ Response
 3.install django libraries : run when required
 
     pip3 install django
+    
+3.1 add django package : 
+
+	settings : project : interprter : add django
 
 4.create virtual environment
 
