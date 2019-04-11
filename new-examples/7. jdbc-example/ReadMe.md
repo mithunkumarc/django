@@ -142,10 +142,11 @@
 
 #### 13. downalod mysql connector and client : try all
 
-          
-	  pip3 install mysqlclient	: working
+          : working
+          sudo apt-get install python-dev default-libmysqlclient-dev	
+	  pip3 install mysqlclient	
 
-	  alternatives : 
+	  alternatives : helpful but not working
 	  sudo apt-get install python3-dev libmysqlclient-dev	
           sudo apt-get install python-psycopg2 python-mysqldb
           sudo apt-get install libmysqlclient-dev
