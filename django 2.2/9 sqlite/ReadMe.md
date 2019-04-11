@@ -78,3 +78,6 @@
     admin/           
     userdetails/        : input form
     display/            : displays list of details
+
+
+#### use onlite sqlite to read database
