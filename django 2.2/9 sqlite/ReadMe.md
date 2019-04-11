@@ -75,6 +75,6 @@
 
 
     http://127.0.0.1:8002/
-    admin/
-    userdetails/
-    display/
+    admin/           
+    userdetails/        : input form
+    display/            : displays list of details
