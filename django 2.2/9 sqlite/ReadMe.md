@@ -1,3 +1,14 @@
+#### to use sqlite no extra config is required
+
+                by default django configured to save data to sqlite
+                
+                        DATABASES = {
+                                    'default': {
+                                                        'ENGINE': 'django.db.backends.sqlite3',
+                                                        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+                                                }
+                                }
+
 #### creating project : 
 
         >> django-admin startproject model_sql
