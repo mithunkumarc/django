@@ -1,3 +1,16 @@
+A session is a mechanism to store information on the server side during the interaction with the web application.
+
+In Django, by default session stores in the database and also allows file-based and cache based sessions.
+(stores session in django session tables)
+
+
+It is implemented via a piece of middleware and can be enabled by using the following code.
+
+Put django.contrib.sessions.middleware.SessionMiddleware in MIDDLEWARE and django.contrib.sessions in INSTALLED_APPS of settings.py file.
+
+To set and get the session in views, we can use request.session and can set multiple times too.
+
+
 #### creating project :
 
           django-admin startproject session_ex
