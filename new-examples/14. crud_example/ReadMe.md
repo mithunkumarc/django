@@ -13,21 +13,21 @@
        crudexample >> source venv/bin/activate
 
 
-#### 3.1 install django lib
+#### 4.1 install django lib
 
 		pip3 install django
 
-#### 3.2 add django plugin to pycharm
+#### 4.2 add django plugin to pycharm
 
 		file > settings > project > interpreter > add django plugin
 
 
-#### 4. create database : (mysql used)	
+#### 5. create database : (mysql used)	
 	
         create database djangodb
 
 
-#### 5. database setup, configure in settings.py
+#### 6. database setup, configure in settings.py
 
         DATABASES = {  
                 'default': {  
@@ -40,12 +40,12 @@
                 }  
               }
 
-#### 6. add employee app in settings.py under INSTALLED apps
+#### 7. add employee app in settings.py under INSTALLED apps
 
 	        'employee',
 
 
-#### 7. employee/models.py
+#### 8. employee/models.py
 
 	    from django.db import models  
 	    class Employee(models.Model):  
@@ -57,7 +57,7 @@
 		          db_table = "employee"  
 
 
-#### 8. employee/forms.py , using models
+#### 9. employee/forms.py , using models
 
         from django import forms  
         from employee.models import Employee  
@@ -67,11 +67,6 @@
                 fields = "__all__"  
 
 
-#### 9. install djanog library : 
-
-        pip3 install django
-
-        # ignore Employee has no property objects error in employee/views.py 
 
 
 #### 10. employee/views.py
