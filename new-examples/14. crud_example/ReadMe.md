@@ -313,7 +313,10 @@
 
 #### 18. set up database : create schema using migrations and execute using migrate
 		
-        pip3 install mysqlclient
+        sudo apt-get install python-dev default-libmysqlclient-dev	
+      	pip3 install mysqlclient		
+	
+	
         python3 manage.py makemigrations  
         python manage.py migrate
 
