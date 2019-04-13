@@ -119,22 +119,43 @@
 
 #### 11. crudexample/urls.py
     
-        from django.contrib import admin  
-        from django.urls import path  
-        from employee import views  
-        urlpatterns = [  
-            path('admin/', admin.site.urls),  
-            path('emp', views.emp),  
-            path('show',views.show),  
-            path('edit/<int:id>', views.edit),          # using function based view, (another type : class based) 
-            path('update/<int:id>', views.update),      # id is a parameter for update function in views.py
-            path('delete/<int:id>', views.destroy),  
-        ]  
+    
+		from django.contrib import admin
+		from django.urls import path,include
+
+		urlpatterns = [
+		    path('admin/', admin.site.urls),
+		    path('', include('employee.urls')),
+		]
+
+    	
+    		
+    
+		#from django.contrib import admin  
+		#from django.urls import path  
+		#from employee import views  
+		#urlpatterns = [  
+		#    path('admin/', admin.site.urls),  
+		#    path('emp', views.emp),  
+		#    path('show',views.show),  
+		#    path('edit/<int:id>', views.edit),          # using function based view, (another type : class based) 
+		#    path('update/<int:id>', views.update),      # id is a parameter for update function in views.py
+		#    path('delete/<int:id>', views.destroy),  
+		#]  
 
 
 #### 12. employee/urls.py
 
-		# not used
+		from django.urls import path
+		from . import views
+
+		urlpatterns = [
+		    path('emp', views.emp),
+		    path('show', views.show),
+		    path('edit/<int:id>', views.edit),  # using function based view, (another type : class based)
+		    path('update/<int:id>', views.update),  # id is a parameter for update function in views.py
+		    path('delete/<int:id>', views.destroy),
+		]
 		
 
 #### 13. employee/templates.index.html
