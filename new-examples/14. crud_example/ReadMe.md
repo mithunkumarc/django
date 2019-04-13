@@ -309,6 +309,10 @@
 
           download bootstrap css files , paste under css folder
           bootstrap js files under js folder
+	  
+	  copy css,js and font to static from bootstrap
+	  
+	  https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip
 
 
 #### 18. set up database : create schema using migrations and execute using migrate
