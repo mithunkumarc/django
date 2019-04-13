@@ -4,7 +4,7 @@
 
 #### 2. create app
 
-        django-admin startapp employee
+        crudexample > django-admin startapp employee
 
 
 #### 3. create virtual environment
