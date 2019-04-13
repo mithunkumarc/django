@@ -13,6 +13,15 @@
        crudexample >> source venv/bin/activate
 
 
+#### 3.1 install django lib
+
+		pip3 install django
+
+#### 3.2 add django plugin to pycharm
+
+		file > settings > project > interpreter > add django plugin
+
+
 #### 4. create database : (mysql used)	
 	
         create database djangodb
