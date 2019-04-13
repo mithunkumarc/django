@@ -145,7 +145,7 @@
 
 
 
-#### downalod mysql connector and client : try all
+#### downalod mysql connector and client
 
 
           sudo apt-get install python-dev default-libmysqlclient-dev	
