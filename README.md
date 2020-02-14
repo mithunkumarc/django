@@ -1,3 +1,12 @@
+#### installing virtual env in windows : 
+
+            while installing python , select set path for python
+            
+            C:\Users\mitchann\Documents\python\django\django-example-channels>python -m venv env
+            C:\Users\mitchann\Documents\python\django\django-example-channels>env\Scripts\activate
+            (env) C:\Users\mitchann\Documents\python\django\django-example-channels>
+
+
 #### django setup laterst version : 
 
             for python3 use pip3
