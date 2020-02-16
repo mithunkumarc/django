@@ -179,3 +179,7 @@ urls.py     : maps to view
 model.py    : db mapping
 template.py : html 
 
+
+#### if pip not working
+
+            https://stackoverflow.com/questions/39832219/pip-not-working-in-python-installation-in-windows-10
