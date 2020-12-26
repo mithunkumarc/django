@@ -183,3 +183,7 @@ template.py : html
 #### if pip not working
 
             https://stackoverflow.com/questions/39832219/pip-not-working-in-python-installation-in-windows-10
+            
+#### tutorials
+
+            https://learndjango.com/tutorials/
